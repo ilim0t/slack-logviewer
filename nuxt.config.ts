@@ -1,4 +1,6 @@
-module.exports = {
+import { Configuration } from '@nuxt/types'
+
+const nuxtConfig: Configuration = {
   mode: 'spa',
   /*
    ** Headers of the page
@@ -55,6 +57,8 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    extend(_config, _ctx): void {}
   }
 }
+module.exports = nuxtConfig
